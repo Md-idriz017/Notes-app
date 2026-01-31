@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #f4f6fb;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* App Container */
+.app {
+  width: 100%;
+  max-width: 420px;
+  height: fit-content;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Search */
+.search {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+/* Textarea */
+.note-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  resize: none;
+  outline: none;
+  margin-bottom: 6px;
+}
+
+/* Error */
+.error {
+  font-size: 13px;
+  color: #e74c3c;
+  min-height: 16px;
+  margin-bottom: 6px;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.cancel {
+  background: #e5e7eb;
+  color: #333;
+  display: none; /* only visible in edit mode */
+}
+
+.is-cancel .cancel{
+  display: initial;
+}
+
+/* Notes List */
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Note Card */
+.note-card {
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: 0.2s ease;
+}
+
+.note-card.editing {
+  border: 2px solid #4f46e5;
+  background: #eef2ff;
+}
+
+/* Note Text */
+.note-text {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+  white-space: pre-wrap;
+}
+
+/* Note Actions */
+.note-actions {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.note-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hidden{
+  display: none;
+}
+
+/* Empty State */
+.empty-msg {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 14px;
+  display: none;
+}
+
+.empty-msg.empty{
+  display: initial;
+}
+
+.confirm-alert{
+  padding: 10px 10px;
+  border-radius: 5px;
+  background-color: lightgray;
+  box-shadow: 0px 4px 8px rgba(56,89,56,0.2);
+}
+
+.confirm-btn{
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.confirm-btn button{
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight:500;
+  border: solid 1.5px black;
+  border-radius: 4px;
+  padding: 2px 8px;
+  background: none;
+}
+
+.confirm-msg .p{
+  font-size: 16px;
+}
+.toast{
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f2933;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.display{
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
