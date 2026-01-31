@@ -7,6 +7,10 @@ A simple notes application built using JavaScript.
 - Delete notes
 - Edit notes
 - Search notes
+- Input validation
+- Cancel edit mode
+- Smooth scroll to form
+- LocalStorage persistence
 - Simple UI
 
 ## Tech Used
